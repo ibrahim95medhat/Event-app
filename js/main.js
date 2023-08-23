@@ -126,6 +126,7 @@ calcTime()
 $(".counter").html(`${res} character remaining`)
 $(".comment").keydown((e)=>{
   count=  e.target.value.split("").length;
-    res=100-count
-    $(".counter").html(`${res} character remaining`)
+    res=100-count;
+    res<=0 ? $(".counter").html(`you have reached the desired num of characters`) : $(".counter").html(`${res} character remaining`) ;
+    
 })
